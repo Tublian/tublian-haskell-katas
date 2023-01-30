@@ -1,0 +1,22 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "hostRequirements": {
+        "cpus": 2
+    },
+    "waitFor": "onCreateCommand",
+    "updateContentCommand": "stack upgrade",
+    "postCreateCommand": "stack build --test",
+    "postStartCommand": "echo 'Tublian: Your environment is ready'",
+    // "postAttachCommand": {
+    //     "server": "stack build --test"
+    // },
+    "customizations": {
+        "codespaces": {
+            "openFiles": [
+                "src/FizzBuzz.hs"
+            ]
+        }
+    }
+}
