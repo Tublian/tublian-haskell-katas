@@ -7,6 +7,7 @@
 *.tix
 .hsenv
 .stack-work/
+.tublian/
 /.cabal-sandbox/
 TAGS
 cabal-dev/
