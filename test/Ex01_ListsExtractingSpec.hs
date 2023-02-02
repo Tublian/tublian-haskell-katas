@@ -1,6 +1,6 @@
 module Ex01_ListsExtractingSpec
   ( spec
-  ) whe
+  ) where
 
 import Test.Hspec
 

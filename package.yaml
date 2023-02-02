@@ -1,0 +1,38 @@
+name: Tublian
+version: 0.1.0.0
+author: Tublian <hello@tublian.com>
+maintainer: hello@tublian.com
+category: Console App
+homepage: https://tublian.com
+
+# ghc-options: -Wall
+
+dependencies:
+  - base >= 4.7 && < 5
+
+library:
+  source-dirs: src/
+  dependencies:
+    - split
+    - random
+
+executables:
+  katas-exe:
+    source-dirs: app/
+    main: Main.hs
+    ghc-options: -threaded -rtsopts -with-rtsopts=-N
+
+tests:
+  katas-test:
+    source-dirs: test/
+    main: Spec.hs
+    dependencies:
+      - hspec == 2.*
+      - containers
+      - bytestring
+      - QuickCheck
+      - Tublian
+      - extra
+      - random
+      - tuple
+      - mtl

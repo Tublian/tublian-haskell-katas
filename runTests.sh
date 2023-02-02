@@ -2,7 +2,7 @@
 
 stack test 2>&1 | tee ./.tublian/output
 
-result=$(cat ./.tublian/output | grep '[0-9]* examples, [0-9]* failures')
+result=$(cat ./.tublian/output | grep '[0-9]* examples, [0-9]* failures, [0-9]* pending\|[0-9]* examples, [0-9]* failures')
 error=$(cat ./.tublian/output | grep 'error')
 username=`git config --get user.name`
 
