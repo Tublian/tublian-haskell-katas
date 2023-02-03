@@ -7,11 +7,8 @@
     },
     "waitFor": "onCreateCommand",
     "updateContentCommand": "stack upgrade",
-    "postCreateCommand": "stack build --test",
+    // "postCreateCommand": "stack build --test",
     "postStartCommand": "echo 'Tublian: Your environment is ready'",
-    // "postAttachCommand": {
-    //     "server": "stack build --test"
-    // },
     "customizations": {
         "codespaces": {
             "openFiles": [

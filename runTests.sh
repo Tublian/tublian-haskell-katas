@@ -1,5 +1,5 @@
 #!/bin/bash
-
+mkdir -p ./.tublian
 stack test 2>&1 | tee ./.tublian/output
 
 result=$(cat ./.tublian/output | grep '[0-9]* examples, [0-9]* failures, [0-9]* pending\|[0-9]* examples, [0-9]* failures')
